@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="welcome-screen" id="welcomeScreen">
+
+        <div class="title-container">
+    <img src="tictactoe-logo.png" alt="Tic Tac Toe Logo" class="logo">
+    <h1>Tic Tac Toe</h1>
+</div>
+        <p class="subtitle">Customize your game and start playing!</p>
+
+        <div class="option-group">
+            <label for="gameMode">Game Mode</label>
+            <select id="gameMode">
+                <option value="pvp">Player vs Player</option>
+                <option value="ai">Player vs AI</option>
+            </select>
+        </div>
+
+        <div class="option-group">
+            <label for="boardSize">Grid Size</label>
+            <select id="boardSize">
+                <option value="3">3 × 3</option>
+                <option value="5">5 × 5</option>
+            </select>
+        </div>
+
+        <button id="startBtn">Start Game</button>
+
+    </div>
+
+    <div class="game-screen" id="gameScreen">
+
+        <h1>Tic Tac Toe</h1>
+
+        <div class="game-info">
+            <span id="selectedMode">Mode: Player vs Player</span>
+            <span id="selectedSize">Grid: 3×3</span>
+        </div>
+        <div class="scoreboard">
+
+    <div class="score-card">
+        X Wins
+        <span id="xScore">0</span>
+    </div>
+
+    <div class="score-card">
+        Draws
+        <span id="drawScore">0</span>
+    </div>
+
+    <div class="score-card">
+        O Wins
+        <span id="oScore">0</span>
+    </div>
+
+</div>
+        <div id="status">Player X's Turn</div>
+
+        <div class="board" id="board">
+        </div>
+        <div class="button-container">
+        <button id="restartBtn">Restart Game</button>
+        <button id="newGameBtn">New Game</button>
+        </div>
+    </div>
+    <div class="board-wrapper">
+    <div id="winningLine"></div>
+
+    <div id="board" class="board">
+    </div>
+</div>
+    <div id="winnerPopup" class="winner-popup">
+
+    <div class="popup-content">
+
+        <h2 id="winnerMessage"></h2>
+
+        <button id="closePopup">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+<canvas id="confettiCanvas"></canvas>
+    <script src="task_03.js"></script>
+
+</body>
+</html>
